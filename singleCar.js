@@ -6,7 +6,6 @@ const presentCar = async () => {
     window.location.replace('index.html')
   } else {
     const car = `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg`
-    // console.log(car)
     displayCar(car)
   }
 }
