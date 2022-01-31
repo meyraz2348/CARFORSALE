@@ -15,7 +15,7 @@ const displayCars = (cars) => {
         return ` <a href="car.html">
             <article class="car" data-id="${id}">
               <img
-                src="${src.original}"
+                src="${src.medium}"
                 alt="Car"
               />
             </article>
