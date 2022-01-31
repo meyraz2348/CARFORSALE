@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>CARSFORSALE</title>
+  </head>
+  <body>
+    <form class="search-form">
+      <h2>Find your next car</h2>
+      <input type="text" placeholder="I'm looking for...." name="car" />
+    </form>
+    <section class="section cars">
+      <article class="loading hide-loading">
+        <img src="./images/loading.gif" alt="Loading gif" />
+      </article>
+      <article>
+        <h2 class="title"></h2>
+      </article>
+      <div class="section-center">
+        <!-- single car -->
+        <a href="car.html" class="car">
+          <article data-id="">
+            <img
+              src="./images/pexels-mike-van-schoonderwalt-3495222.jpg"
+              alt="Car"
+            />
+          </article>
+          <!-- <h2>2018 Toyota Hilux SR Auto 4x4</h2>
+          <aside class="aside">
+          <ul>
+            <li>98000</li>
+            <li>Cab Chassis</li>
+          </ul>
+          <ul>
+            <li>Automati</li>
+            <li>4cyl 2.8L Turbo Diesel</li>
+          </ul>
+        </aside> -->
+        </a>
+        <!-- end of single car -->
+      </div>
+    </section>
+  </body>
+  <script type="module" src="app.js"></script>
+</html>
