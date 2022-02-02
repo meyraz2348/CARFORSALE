@@ -37,6 +37,7 @@ Variables
   --clr-grey-8: hsl(210, 31%, 80%);
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-grey-11: hsl(208, 32%, 98%);
   --clr-white: #fff;
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
@@ -153,11 +154,9 @@ p {
 /* section */
 .section {
   padding: 5rem 0;
-  /* border: 1px solid blue; */
 }
 
 .section-center {
-  /* border: 1px solid red; */
   width: 85vw;
   margin: 0 auto;
   max-width: 1170px;
@@ -165,7 +164,7 @@ p {
 @media screen and (min-width: 576px) {
   .section-center {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     column-gap: 4rem;
   }
 }
@@ -243,12 +242,13 @@ input::placeholder {
   display: block;
   border-radius: var(--radius);
   border: 10px solid var(--clr-white);
+  border-bottom: 0;
   transition: var(--transition);
   height: 468px;
   object-fit: cover;
 }
 .car:hover img {
-  filter: blur(2px) grayscale(50%);
+  filter: blur(2px) grayscale(35%);
 }
 .car h3 {
   position: absolute;
@@ -264,12 +264,6 @@ input::placeholder {
   font-size: 2rem;
   border-radius: var(--radius);
 }
-aside {
-  /* position: absolute; */
-  position: relative;
-  place-items: center;
-  place-content: center;
-}
 /* single car */
 .single-car {
   width: 85vw;
@@ -282,6 +276,7 @@ aside {
   height: 400px;
   object-fit: cover;
   display: block;
+
   border: 10px solid var(--clr-white);
   border-radius: var(--radius);
 }
@@ -296,11 +291,55 @@ aside {
   padding-top: 2rem;
 }
 
-.car-ingredients .far {
+.car-details .far {
   margin-right: 1rem;
 }
 
 .single-car .btn {
   display: inline-block;
   margin-top: 2rem;
+}
+
+/*
+Cards
+*/
+.cards {
+  margin-bottom: 2rem;
+}
+.card-content {
+  font-size: 2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: var(--clr-grey-11);
+  border: 10px solid var(--clr-white);
+  border-top: 0;
+  border-bottom: 0;
+}
+.card-info {
+  font-size: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--clr-black);
+  border: 10px solid var(--clr-white);
+  border-top: 0;
+  justify-content: space-between;
+  padding-left: 2.5rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  background-color: var(--clr-grey-11);
+}
+.card-info ul {
+  list-style-type: disc;
+}
+a:link {
+  text-decoration: none;
+}
+a {
+  color: var(--clr-black);
 }
