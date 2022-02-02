@@ -1,16 +1,32 @@
 import { hideLoading } from './toggleLoading.js'
 import get from './getElement.js'
-const displayCar = (car) => {
+const displayCar = (
+  car,
+  vehicleModel,
+  vehicleManufacturer,
+  vehicleColor,
+  vehicleType
+) => {
   hideLoading()
   const img = get('.car-img')
-  const carName = get('.car-name')
-  const description = get('.car-desc')
-  const ingredients = get('.car-ingredients')
+  const details = get('.car-details')
   img.src = car
-  const carDetails = `<li><i class="far fa-check-square"></i>98000</li>
-    <li><i class="far fa-check-square"></i>Coupe</li>
-    <li><i class="far fa-check-square"></i>Automatic</li>
-    <li><i class="far fa-check-square"></i>4 cyl 1.8l Turbo Petrol</li>`
-  ingredients.innerHTML = carDetails
+  const carDetails = `<li><i class="far fa-check-square"></i>${vehicleModel.replace(
+    /"/g,
+    ''
+  )}</li>
+    <li><i class="far fa-check-square"></i>${vehicleManufacturer.replace(
+      /"/g,
+      ''
+    )}</li>
+    <li><i class="far fa-check-square"></i>${vehicleColor.replace(
+      /"/g,
+      ''
+    )}</li>
+    <li><i class="far fa-check-square"></i>${vehicleType.replace(
+      /"/g,
+      ''
+    )}</li>`
+  details.innerHTML = carDetails
 }
 export default displayCar
