@@ -3,7 +3,7 @@ import { hideLoading } from './toggleLoading.js'
 const displayCars = (carImages, carDetails) => {
   const img = carImages.map((img) => {
     const { src, id } = img
-    return src.medium
+    return src.small
   })
   const imageId = carImages.map((img) => {
     const { src, id } = img

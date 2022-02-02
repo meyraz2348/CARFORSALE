@@ -337,6 +337,9 @@ Cards
 .card-info ul {
   list-style-type: disc;
 }
+.card-info li {
+  text-transform: capitalize;
+}
 a:link {
   text-decoration: none;
 }
